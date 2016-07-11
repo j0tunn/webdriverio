@@ -16,6 +16,8 @@
     "should": true,
     "browser": true,
     "browserA": true,
-    "mock": true
+    "mock": true,
+    "assert": true,
+    "sinon": true
   }
 }

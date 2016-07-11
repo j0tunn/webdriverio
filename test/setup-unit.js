@@ -3,14 +3,23 @@ import nock from 'nock'
 import chai from 'chai'
 import merge from 'deepmerge'
 import chaiString from 'chai-string'
+import chaiAsPromised from 'chai-as-promised'
+import sinon from 'sinon'
 
 /**
  * setup chai
  */
 chai.should()
 chai.use(chaiString)
+chai.use(chaiAsPromised)
 global.assert = chai.assert
 global.expect = chai.expect
+
+/**
+ * setup sinon
+ */
+global.sinon = sinon
+sinon.assert.expose(chai.assert, {prefix: ''})
 
 /**
  * provide simplified mock interface
